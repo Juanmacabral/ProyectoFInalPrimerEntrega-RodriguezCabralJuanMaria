@@ -1,0 +1,29 @@
+{% extends "AppCoder/padre.html" %}
+
+
+
+{% load static %}
+
+{% block Titulo %}
+<h1 class="mb-5"> Resultado de busqueda de disco </h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+<center><h3>{{ mensaje }}</h3></center>
+
+<br>
+
+<br>
+
+<h4> Discos </h4>
+
+<br>
+
+{% for disco in discos %}
+<h4>{{ disco.artista }} - {{ disco.disco }} - {{ disco.cantidad_canciones }} </h4>
+{% endfor %}
+
+
+
+{% endblock %}

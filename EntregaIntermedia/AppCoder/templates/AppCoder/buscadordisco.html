@@ -1,0 +1,33 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block Titulo %}
+<h1 class="mb-5"> Buscador de discos</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+<br>
+<center><h3 >{{ mensaje }}</h3></center> 
+
+
+<br>
+<center>
+<h4> ¿Que disco estas buscando? </h4>
+
+<br>
+
+<form action="{% url 'buscardisco' %}" method="GET"> {% csrf_token %}
+
+    <input type="text" name="nombre"  placeholder="Ingresa el nombre del disco" >
+
+    <br>
+    <br>
+    <input type="submit" value="buscar">
+    
+</form>
+</center>
+
+
+{% endblock %}

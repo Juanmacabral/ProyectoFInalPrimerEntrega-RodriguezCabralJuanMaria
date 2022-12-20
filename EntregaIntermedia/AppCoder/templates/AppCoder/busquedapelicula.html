@@ -1,0 +1,28 @@
+{% extends "AppCoder/padre.html" %}
+
+
+{% load static %}
+
+{% block Titulo %}
+<h1 class="mb-5"> Resultado de busqueda de libro </h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+<center><h3>{{ mensaje }}</h3></center>
+
+<br>
+
+<br>
+
+<h4> Peliculas </h4>
+
+<br>
+
+{% for titulo in peliculas %}
+<h4>{{ titulo.titulo }} - {{ titulo.director }} - {{ titulo.fecha_de_estreno }} </h4>
+{% endfor %}
+
+
+
+{% endblock %}
